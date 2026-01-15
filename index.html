@@ -428,12 +428,25 @@
 				display: inline-flex;
 				align-items: center;
 				gap: 0.5rem;
+				border-radius: 50px !important;
+				padding: 0.75rem 1.5rem !important;
+				transition: all 0.3s ease !important;
+			}
+
+			[aria-label*="Chang"]:hover {
+				transform: translateY(-2px) !important;
 			}
 
 			[aria-label*="Chang"]::before {
 				font-family: 'Font Awesome 6 Free';
 				font-weight: 900;
 				display: inline-block;
+			}
+
+			/* Force all buttons with px-4 to be rounded pills */
+			button[class*="px-4"][class*="py-2"][class*="rounded"] {
+				border-radius: 50px !important;
+				padding: 0.75rem 1.5rem !important;
 			}
 
 			/* Portugal/Brasil flag icon */
@@ -451,16 +464,19 @@
 				order: 10;
 				width: 100%;
 				margin-top: var(--space-3xl);
-				padding: var(--space-3xl) 0;
-				background: linear-gradient(180deg, rgba(16, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.4) 100%);
-				border-top: 1px solid rgba(52, 211, 153, 0.2);
-				border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+				padding: var(--space-3xl) var(--space-lg);
+				background: linear-gradient(180deg, rgba(16, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.6) 100%);
+				border-top: 2px solid rgba(52, 211, 153, 0.3);
+				border-bottom: 2px solid rgba(52, 211, 153, 0.3);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 400px;
 			}
 
 			.hero-stats > div {
 				max-width: 1280px;
-				margin: 0 auto;
-				padding: 0 var(--space-lg);
+				width: 100%;
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
 				gap: var(--space-xl);
