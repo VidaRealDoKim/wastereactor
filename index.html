@@ -686,6 +686,29 @@
 		</style>
 		<script type="module" crossorigin src="/assets/index-5420e65f.js"></script>
 		<script src="/cookie-consent.js"></script>
+		<script>
+			// Handle logo/home click to scroll to top
+			document.addEventListener('DOMContentLoaded', function() {
+				// Find all elements that might be the logo/home button
+				const logoElements = document.querySelectorAll('[alt*="logo"], [class*="logo"], [href*="/"], [href="#"]');
+				logoElements.forEach(el => {
+					el.addEventListener('click', function(e) {
+						// Check if it's a navigation/logo element
+						if (el.tagName === 'A' || el.className.includes('logo') || el.alt.includes('logo')) {
+							window.scrollTo({ top: 0, behavior: 'smooth' });
+						}
+					});
+				});
+
+				// Also handle direct clicks on document for React-based routing
+				document.addEventListener('click', function(e) {
+					const target = e.target.closest('[class*="logo"], img[alt*="WasteReactor"], svg[class*="logo"]');
+					if (target) {
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					}
+				});
+			});
+		</script>
 		<script type="module">
 window.onerror = (message, source, lineno, colno, errorObj) => {
 	const errorDetails = errorObj ? JSON.stringify({
