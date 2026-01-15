@@ -21,7 +21,7 @@ class CookieConsent {
     banner.innerHTML = `
       <div class="cookie-content">
         <div class="cookie-text">
-          <h3>🍪 Política de Cookies</h3>
+          <h3>Política de Cookies</h3>
           <p>Utilizamos cookies para melhorar sua experiência no site. Ao continuar navegando, você concorda com nossa política de cookies.</p>
         </div>
         <div class="cookie-buttons">
