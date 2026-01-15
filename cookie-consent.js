@@ -46,7 +46,7 @@ class CookieConsent {
       this.closeBanner();
     });
 
-    // Event listener para o link "Saiba mais"
+    // Event listener para o botão "Saiba mais"
     document.getElementById('cookie-learn-more').addEventListener('click', (e) => {
       e.preventDefault();
       this.showPrivacyPopup(e.target);
@@ -104,25 +104,6 @@ class CookieConsent {
       date: new Date().toISOString()
     }));
   }
-
-  closeBanner() {
-    const banner = document.getElementById('cookie-banner');
-    if (banner) {
-      banner.style.animation = 'slideOut 0.3s ease-out';
-      setTimeout(() => banner.remove(), 300);
-    }
-  }
-
-  loadAnalytics() {
-    // Google Analytics ou outro serviço aqui
-    console.log('Analytics habilitados');
-  }
-}
-
-// Inicializar quando DOM estiver pronto
-document.addEventListener('DOMContentLoaded', () => {
-  new CookieConsent();
-});
 
   closeBanner() {
     const banner = document.getElementById('cookie-banner');
