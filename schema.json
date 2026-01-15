@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Waste Reactor",
+  "url": "https://wastereactor.com.br",
+  "logo": "https://wastereactor.com.br/eclipse-logo.svg",
+  "description": "Soluções inovadoras e sustentáveis em gerenciamento de resíduos",
+  "sameAs": [
+    "https://www.facebook.com/wastereactor",
+    "https://www.instagram.com/wastereactor",
+    "https://twitter.com/wastereactor"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "availableLanguage": ["pt-BR", "en"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BR"
+  }
+}
+</script>
